@@ -1,8 +1,20 @@
 {
   "version": 2,
-  "dgSpecHash": "TqP63awJgmI=",
+  "dgSpecHash": "38M+DvW0D6I=",
   "success": true,
   "projectFilePath": "C:\\Users\\Caius\\RiderProjects\\mpp-proiect-csharp-VladMcDash\\ProiectMPP\\ProiectMPP.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Caius\\.nuget\\packages\\log4net\\3.3.0\\log4net.3.3.0.nupkg.sha512",
+    "C:\\Users\\Caius\\.nuget\\packages\\microsoft.data.sqlite\\11.0.0-preview.2.26159.112\\microsoft.data.sqlite.11.0.0-preview.2.26159.112.nupkg.sha512",
+    "C:\\Users\\Caius\\.nuget\\packages\\microsoft.data.sqlite.core\\11.0.0-preview.2.26159.112\\microsoft.data.sqlite.core.11.0.0-preview.2.26159.112.nupkg.sha512",
+    "C:\\Users\\Caius\\.nuget\\packages\\sourcegear.sqlite3\\3.50.4.2\\sourcegear.sqlite3.3.50.4.2.nupkg.sha512",
+    "C:\\Users\\Caius\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\3.0.2\\sqlitepclraw.bundle_e_sqlite3.3.0.2.nupkg.sha512",
+    "C:\\Users\\Caius\\.nuget\\packages\\sqlitepclraw.config.e_sqlite3\\3.0.2\\sqlitepclraw.config.e_sqlite3.3.0.2.nupkg.sha512",
+    "C:\\Users\\Caius\\.nuget\\packages\\sqlitepclraw.core\\3.0.2\\sqlitepclraw.core.3.0.2.nupkg.sha512",
+    "C:\\Users\\Caius\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\3.0.2\\sqlitepclraw.provider.e_sqlite3.3.0.2.nupkg.sha512",
+    "C:\\Users\\Caius\\.nuget\\packages\\system.configuration.configurationmanager\\11.0.0-preview.2.26159.112\\system.configuration.configurationmanager.11.0.0-preview.2.26159.112.nupkg.sha512",
+    "C:\\Users\\Caius\\.nuget\\packages\\system.diagnostics.eventlog\\11.0.0-preview.2.26159.112\\system.diagnostics.eventlog.11.0.0-preview.2.26159.112.nupkg.sha512",
+    "C:\\Users\\Caius\\.nuget\\packages\\system.security.cryptography.protecteddata\\11.0.0-preview.2.26159.112\\system.security.cryptography.protecteddata.11.0.0-preview.2.26159.112.nupkg.sha512"
+  ],
   "logs": []
 }

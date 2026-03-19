@@ -7,4 +7,19 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="log4net" Version="3.3.0" />
+      <PackageReference Include="Microsoft.Data.Sqlite" Version="11.0.0-preview.2.26159.112" />
+      <PackageReference Include="System.Configuration.ConfigurationManager" Version="11.0.0-preview.2.26159.112" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="log4net.config">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="teledon.db">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
 </Project>
