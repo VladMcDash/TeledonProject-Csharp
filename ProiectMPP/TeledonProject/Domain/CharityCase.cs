@@ -1,8 +1,10 @@
-﻿namespace ProiectMPP.TeledonProject.domain;
+﻿namespace ProiectMPP.TeledonProject.Domain;
 
 [Serializable]
+
 public class CharityCase : Entity<long>
 {
+    public long Id { get; set; }
     public string Name { get; set; }
     public double TotalAmount { get; set; }
 

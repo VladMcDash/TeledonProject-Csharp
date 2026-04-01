@@ -1,4 +1,4 @@
-﻿namespace ProiectMPP.TeledonProject.domain;
+﻿namespace ProiectMPP.TeledonProject.Domain;
 using System;
 
 [Serializable]

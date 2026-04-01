@@ -1,5 +1,5 @@
 ﻿using System;
-namespace ProiectMPP.TeledonProject.domain;
+namespace ProiectMPP.TeledonProject.Domain;
 [Serializable]
 public abstract class Entity<TId>
     {

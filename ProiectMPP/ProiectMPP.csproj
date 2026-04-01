@@ -1,12 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <OutputType>Exe</OutputType>
-        <TargetFramework>net10.0</TargetFramework>
-        <ImplicitUsings>enable</ImplicitUsings>
-        <Nullable>enable</Nullable>
-    </PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net10.0-windows</TargetFramework>
 
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+
+        <UseWindowsForms>true</UseWindowsForms>
+    </PropertyGroup>
+        
     <ItemGroup>
       <PackageReference Include="log4net" Version="3.3.0" />
       <PackageReference Include="Microsoft.Data.Sqlite" Version="11.0.0-preview.2.26159.112" />
@@ -20,6 +23,15 @@
       <None Update="teledon.db">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </None>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="TeledonProject\GUI\LoginForm.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="TeledonProject\GUI\MainForm.cs">
+        <SubType>Form</SubType>
+      </Compile>
     </ItemGroup>
 
 </Project>
