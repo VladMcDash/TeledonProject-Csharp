@@ -72,7 +72,22 @@ namespace ProiectMPP.TeledonProject.Repository
             }
         }
 
-        public void Update(long id, Donor entity) { }
+        public void Update(long id, Donor entity)
+        {
+            using (var con = (SqliteConnection)_dbUtils.GetConnection())
+            {
+                con.Open();
+                using (var cmd = con.CreateCommand())
+                {
+                    cmd.CommandText = "UPDATE Donors SET name = @n, address = @a, phoneNumber = @p WHERE id = @id";
+                    cmd.Parameters.AddWithValue("@n", entity.Name);
+                    cmd.Parameters.AddWithValue("@a", entity.Address);
+                    cmd.Parameters.AddWithValue("@p", entity.PhoneNumber);
+                    cmd.Parameters.AddWithValue("@id", id);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
         public void Delete(long id) { }
         public Donor FindOne(long id) => null;
         public IEnumerable<Donor> FindAll() => new List<Donor>();

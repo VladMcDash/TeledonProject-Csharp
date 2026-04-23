@@ -60,5 +60,13 @@ namespace ProiectMPP.TeledonProject.Service
             _donationRepo.Add(new Donation(donor, new CharityCase { Id = caseId }, amount));
             _caseRepo.UpdateTotalAmount(caseId, amount);
         }
+        public void UpdateDonor(long id, string name, string address, string phoneNumber)
+        {
+            if (string.IsNullOrEmpty(name)) throw new Exception("Nume empty");
+    
+            Donor d = new Donor(name, address, phoneNumber);
+            d.Id = id;
+            _donorRepo.Update(id, d);
+        }
     }
-}
+}//loguri pt servicii

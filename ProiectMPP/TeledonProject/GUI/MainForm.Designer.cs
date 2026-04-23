@@ -16,6 +16,7 @@
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Label lblCazuri;
         private System.Windows.Forms.Label lblDonatori;
+        private System.Windows.Forms.Button btnUpdateDonor;
 
         protected override void Dispose(bool disposing)
         {
@@ -29,6 +30,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.btnUpdateDonor = new System.Windows.Forms.Button();
+
+            this.btnUpdateDonor.Text = "Actualizeaza Date Donator";
+            this.btnUpdateDonor.Location = new System.Drawing.Point(450, 360); 
+            this.btnUpdateDonor.Size = new System.Drawing.Size(250, 35);
+            this.btnUpdateDonor.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnUpdateDonor.Click += new System.EventHandler(this.btnUpdateDonor_Click);
+
+            this.Controls.Add(this.btnUpdateDonor);
             dgvCases = new System.Windows.Forms.DataGridView();
             listBoxDonors = new System.Windows.Forms.ListBox();
             txtSearch = new System.Windows.Forms.TextBox();

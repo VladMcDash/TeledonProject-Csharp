@@ -41,7 +41,7 @@ namespace TeledonProject.GUI
                 txtPhone.Text = selected.PhoneNumber;
             }
         }
-
+        
         private void btnAddDonation_Click(object sender, EventArgs e)
         {
             try
@@ -81,6 +81,32 @@ namespace TeledonProject.GUI
         private void btnLogout_Click(object sender, EventArgs e)
         {
             this.Close(); 
+        }
+        private void btnUpdateDonor_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (listBoxDonors.SelectedItem is Donor selected)
+                {
+                    _service.UpdateDonor(
+                        selected.Id, 
+                        txtDonorName.Text, 
+                        txtAddress.Text, 
+                        txtPhone.Text
+                    );
+            
+                    MessageBox.Show("Datele donatorului au fost actualizate!");
+                    txtSearch_TextChanged(null, null);
+                }
+                else
+                {
+                    MessageBox.Show("Selectati un donator din lista!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Eroare: " + ex.Message);
+            }
         }
     }
 }
