@@ -30,12 +30,17 @@ namespace ProiectMPP.TeledonProject.Repository
                     {
                         if (reader.Read())
                         {
+                            int idIdx = reader.GetOrdinal("id");
+                            int userIdx = reader.GetOrdinal("username");
+                            int passIdx = reader.GetOrdinal("password");
+                            int nameIdx = reader.GetOrdinal("name");
+
                             var v = new Volunteer(
-                                reader.GetString(0), // username
-                                reader.GetString(1), // password
-                                reader.GetString(2)  // name
+                                reader.GetString(userIdx),
+                                reader.GetString(passIdx),
+                                reader.GetString(nameIdx)
                             );
-                            v.Id = reader.GetInt64(3); // id
+                            v.Id = reader.GetInt64(idIdx);
                             return v;
                         }
                     }

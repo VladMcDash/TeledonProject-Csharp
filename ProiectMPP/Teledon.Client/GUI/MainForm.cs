@@ -14,9 +14,11 @@ namespace TeledonProject.GUI
 
         public MainForm(ITeledonServices service, Volunteer currentUser)
         {
-            InitializeComponent();
+            InitializeComponent();  
             _service = service ?? throw new ArgumentNullException(nameof(service));
             _currentUser = currentUser ?? throw new ArgumentNullException(nameof(currentUser));
+            _service.Login(_currentUser, this);
+            LoadCases();
         }
 
         public void InitializeAfterLogin()
@@ -26,8 +28,27 @@ namespace TeledonProject.GUI
 
         private void LoadCases()
         {
-            var cases = _service.GetAllCases();
-            dgvCases.DataSource = cases == null ? new List<CharityCase>() : cases.ToList();
+            try
+            {
+                var cases = _service.GetAllCases() ?? new List<CharityCase>();
+
+                if (InvokeRequired)
+                {
+                    BeginInvoke(new Action(() =>
+                    {
+                        dgvCases.DataSource = null;
+                        dgvCases.DataSource = cases.ToList();
+                    }));
+                    return;
+                }
+
+                dgvCases.DataSource = null;
+                dgvCases.DataSource = cases.ToList();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Eroare la preluarea cazurilor: " + ex.Message);
+            }
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)

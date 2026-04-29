@@ -21,10 +21,6 @@ namespace TeledonProject.GUI
                 // We create a dummy volunteer for the login credentials
                 Volunteer v = new Volunteer(txtUsername.Text, txtPassword.Text, "") { Id = 1 };
                 var mainForm = new MainForm(_service, v);
-                // login is called from mainForm or we call it here and pass the observer?
-                // The prompt says "MainForm trebuie să implementeze interfața ITeledonObserver."
-                // So login should be called inside MainForm, or we call it here and pass mainForm.
-                _service.Login(v, mainForm);
                 mainForm.Show();
                 this.Hide();
             } catch (Exception ex) {
