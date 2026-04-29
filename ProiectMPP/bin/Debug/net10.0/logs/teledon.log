@@ -1,0 +1,45 @@
+2026-03-19 12:43:59,612 [2] INFO  TeledonProject.Repository.DonorDbRepository - Initializing DonorDbRepository
+2026-03-19 12:43:59,662 [2] DEBUG TeledonProject.Repository.CharityCaseDbRepository - Entering FindAll CharityCases
+2026-03-19 12:43:59,669 [2] INFO  ProiectMPP.TeledonProject.Repository.DbUtils - conectare db
+2026-03-19 12:43:59,734 [2] DEBUG ProiectMPP.TeledonProject.Repository.DbUtils - Connection string: Data Source=teledon.db
+2026-03-19 12:43:59,857 [2] INFO  TeledonProject.Program - Se cauta donatori cu filtrul: Mihai
+2026-03-19 12:43:59,860 [2] DEBUG TeledonProject.Repository.DonorDbRepository - Entering FindByNameLike with param: Mihai
+2026-03-19 12:43:59,861 [2] INFO  ProiectMPP.TeledonProject.Repository.DbUtils - conectare db
+2026-03-19 12:43:59,880 [2] DEBUG TeledonProject.Repository.DonorDbRepository - Exiting FindByNameLike with 1 results
+2026-03-19 12:43:59,884 [2] DEBUG TeledonProject.Repository.DonorDbRepository - Entering Add with entity: Donor{id=0, name='Test', address='Str. Rider 2026', phone='0799888777'}
+2026-03-19 12:43:59,885 [2] INFO  ProiectMPP.TeledonProject.Repository.DbUtils - conectare db
+2026-03-19 12:43:59,900 [2] DEBUG TeledonProject.Repository.DonorDbRepository - Exiting Add
+2026-03-19 12:43:59,901 [2] INFO  TeledonProject.Program - Donator adaugat.
+2026-03-19 12:43:59,903 [2] DEBUG TeledonProject.Repository.CharityCaseDbRepository - Updating amount for case 1
+2026-03-19 12:43:59,904 [2] INFO  ProiectMPP.TeledonProject.Repository.DbUtils - conectare db
+2026-03-19 12:43:59,920 [2] INFO  TeledonProject.Program - Suma cazului 1 a fost actualizata.
+2026-03-19 12:45:42,837 [2] INFO  TeledonProject.Repository.DonorDbRepository - Initializing DonorDbRepository
+2026-03-19 12:45:42,876 [2] DEBUG TeledonProject.Repository.CharityCaseDbRepository - Entering FindAll CharityCases
+2026-03-19 12:45:42,880 [2] INFO  ProiectMPP.TeledonProject.Repository.DbUtils - conectare db
+2026-03-19 12:45:42,935 [2] DEBUG ProiectMPP.TeledonProject.Repository.DbUtils - Connection string: Data Source=teledon.db
+2026-03-19 12:45:43,044 [2] INFO  TeledonProject.Program - Se cauta donatori cu filtrul: Mihai
+2026-03-19 12:45:43,048 [2] DEBUG TeledonProject.Repository.DonorDbRepository - Entering FindByNameLike with param: Mihai
+2026-03-19 12:45:43,048 [2] INFO  ProiectMPP.TeledonProject.Repository.DbUtils - conectare db
+2026-03-19 12:45:43,066 [2] DEBUG TeledonProject.Repository.DonorDbRepository - Exiting FindByNameLike with 1 results
+2026-03-19 12:45:43,069 [2] DEBUG TeledonProject.Repository.DonorDbRepository - Entering Add with entity: Donor{id=0, name='Test', address='Str. Rider 2026', phone='0799888777'}
+2026-03-19 12:45:43,070 [2] INFO  ProiectMPP.TeledonProject.Repository.DbUtils - conectare db
+2026-03-19 12:45:43,082 [2] DEBUG TeledonProject.Repository.DonorDbRepository - Exiting Add
+2026-03-19 12:45:43,083 [2] INFO  TeledonProject.Program - Donator adaugat.
+2026-03-19 12:45:43,084 [2] DEBUG TeledonProject.Repository.CharityCaseDbRepository - Updating amount for case 1
+2026-03-19 12:45:43,085 [2] INFO  ProiectMPP.TeledonProject.Repository.DbUtils - conectare db
+2026-03-19 12:45:43,098 [2] INFO  TeledonProject.Program - Suma cazului 1 a fost actualizata.
+2026-04-01 22:19:37,793 [2] INFO  TeledonProject.Repository.DonorDbRepository - Initializing DonorDbRepository
+2026-04-01 22:19:37,835 [2] DEBUG TeledonProject.Repository.CharityCaseDbRepository - Entering FindAll CharityCases
+2026-04-01 22:19:37,855 [2] INFO  ProiectMPP.TeledonProject.Repository.DbUtils - conectare db
+2026-04-01 22:19:37,947 [2] DEBUG ProiectMPP.TeledonProject.Repository.DbUtils - Connection string: Data Source=teledon.db
+2026-04-01 22:19:38,565 [2] INFO  TeledonProject.Program - Se cauta donatori cu filtrul: Mihai
+2026-04-01 22:19:38,569 [2] DEBUG TeledonProject.Repository.DonorDbRepository - Entering FindByNameLike with param: Mihai
+2026-04-01 22:19:38,571 [2] INFO  ProiectMPP.TeledonProject.Repository.DbUtils - conectare db
+2026-04-01 22:19:38,587 [2] DEBUG TeledonProject.Repository.DonorDbRepository - Exiting FindByNameLike with 1 results
+2026-04-01 22:19:38,589 [2] DEBUG TeledonProject.Repository.DonorDbRepository - Entering Add with entity: Donor{id=0, name='Test', address='Str. Rider 2026', phone='0799888777'}
+2026-04-01 22:19:38,590 [2] INFO  ProiectMPP.TeledonProject.Repository.DbUtils - conectare db
+2026-04-01 22:19:38,602 [2] DEBUG TeledonProject.Repository.DonorDbRepository - Exiting Add
+2026-04-01 22:19:38,602 [2] INFO  TeledonProject.Program - Donator adaugat.
+2026-04-01 22:19:38,604 [2] DEBUG TeledonProject.Repository.CharityCaseDbRepository - Updating amount for case 1
+2026-04-01 22:19:38,606 [2] INFO  ProiectMPP.TeledonProject.Repository.DbUtils - conectare db
+2026-04-01 22:19:38,620 [2] INFO  TeledonProject.Program - Suma cazului 1 a fost actualizata.

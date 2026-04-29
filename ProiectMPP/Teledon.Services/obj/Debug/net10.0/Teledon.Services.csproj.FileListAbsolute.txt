@@ -1,0 +1,16 @@
+C:\Users\Caius\RiderProjects\mpp-proiect-csharp-VladMcDash\ProiectMPP\Teledon.Services\bin\Debug\net10.0\Teledon.Services.deps.json
+C:\Users\Caius\RiderProjects\mpp-proiect-csharp-VladMcDash\ProiectMPP\Teledon.Services\bin\Debug\net10.0\Teledon.Services.dll
+C:\Users\Caius\RiderProjects\mpp-proiect-csharp-VladMcDash\ProiectMPP\Teledon.Services\bin\Debug\net10.0\Teledon.Services.pdb
+C:\Users\Caius\RiderProjects\mpp-proiect-csharp-VladMcDash\ProiectMPP\Teledon.Services\bin\Debug\net10.0\Teledon.Model.dll
+C:\Users\Caius\RiderProjects\mpp-proiect-csharp-VladMcDash\ProiectMPP\Teledon.Services\bin\Debug\net10.0\Teledon.Model.pdb
+C:\Users\Caius\RiderProjects\mpp-proiect-csharp-VladMcDash\ProiectMPP\Teledon.Services\obj\Debug\net10.0\Teledon.Services.csproj.AssemblyReference.cache
+C:\Users\Caius\RiderProjects\mpp-proiect-csharp-VladMcDash\ProiectMPP\Teledon.Services\obj\Debug\net10.0\Teledon.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Caius\RiderProjects\mpp-proiect-csharp-VladMcDash\ProiectMPP\Teledon.Services\obj\Debug\net10.0\Teledon.Services.AssemblyInfoInputs.cache
+C:\Users\Caius\RiderProjects\mpp-proiect-csharp-VladMcDash\ProiectMPP\Teledon.Services\obj\Debug\net10.0\Teledon.Services.AssemblyInfo.cs
+C:\Users\Caius\RiderProjects\mpp-proiect-csharp-VladMcDash\ProiectMPP\Teledon.Services\obj\Debug\net10.0\Teledon.Services.csproj.CoreCompileInputs.cache
+C:\Users\Caius\RiderProjects\mpp-proiect-csharp-VladMcDash\ProiectMPP\Teledon.Services\obj\Debug\net10.0\Teledon.Services.sourcelink.json
+C:\Users\Caius\RiderProjects\mpp-proiect-csharp-VladMcDash\ProiectMPP\Teledon.Services\obj\Debug\net10.0\Teledon..FBE46BB9.Up2Date
+C:\Users\Caius\RiderProjects\mpp-proiect-csharp-VladMcDash\ProiectMPP\Teledon.Services\obj\Debug\net10.0\Teledon.Services.dll
+C:\Users\Caius\RiderProjects\mpp-proiect-csharp-VladMcDash\ProiectMPP\Teledon.Services\obj\Debug\net10.0\refint\Teledon.Services.dll
+C:\Users\Caius\RiderProjects\mpp-proiect-csharp-VladMcDash\ProiectMPP\Teledon.Services\obj\Debug\net10.0\Teledon.Services.pdb
+C:\Users\Caius\RiderProjects\mpp-proiect-csharp-VladMcDash\ProiectMPP\Teledon.Services\obj\Debug\net10.0\ref\Teledon.Services.dll

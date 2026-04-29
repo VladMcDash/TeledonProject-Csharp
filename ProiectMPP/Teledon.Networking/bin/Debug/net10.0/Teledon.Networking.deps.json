@@ -1,0 +1,56 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "Teledon.Networking/1.0.0": {
+        "dependencies": {
+          "Teledon.Model": "1.0.0",
+          "Teledon.Services": "1.0.0"
+        },
+        "runtime": {
+          "Teledon.Networking.dll": {}
+        }
+      },
+      "Teledon.Model/1.0.0": {
+        "runtime": {
+          "Teledon.Model.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Teledon.Services/1.0.0": {
+        "dependencies": {
+          "Teledon.Model": "1.0.0"
+        },
+        "runtime": {
+          "Teledon.Services.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Teledon.Networking/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Teledon.Model/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Teledon.Services/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

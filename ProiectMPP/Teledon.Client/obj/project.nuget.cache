@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "dgSpecHash": "Di+oTfT/omk=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Caius\\RiderProjects\\mpp-proiect-csharp-VladMcDash\\ProiectMPP\\Teledon.Client\\Teledon.Client.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Caius\\.nuget\\packages\\system.configuration.configurationmanager\\8.0.0\\system.configuration.configurationmanager.8.0.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1510",
+      "level": "Warning",
+      "message": "PackageReference System.Configuration.ConfigurationManager will not be pruned. Consider removing this package from your dependencies, as it is likely unnecessary.",
+      "projectPath": "C:\\Users\\Caius\\RiderProjects\\mpp-proiect-csharp-VladMcDash\\ProiectMPP\\Teledon.Client\\Teledon.Client.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\Caius\\RiderProjects\\mpp-proiect-csharp-VladMcDash\\ProiectMPP\\Teledon.Client\\Teledon.Client.csproj",
+      "libraryId": "System.Configuration.ConfigurationManager",
+      "targetGraphs": [
+        "net10.0-windows7.0"
+      ]
+    }
+  ]
+}
