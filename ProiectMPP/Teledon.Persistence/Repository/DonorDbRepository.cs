@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Data;
 using Microsoft.Data.Sqlite;
 using ProiectMPP.TeledonProject.Domain;
@@ -90,6 +90,25 @@ namespace ProiectMPP.TeledonProject.Repository
         }
         public void Delete(long id) { }
         public Donor FindOne(long id) => null;
-        public IEnumerable<Donor> FindAll() => new List<Donor>();
+        public IEnumerable<Donor> FindAll()
+        {
+            IList<Donor> donors = new List<Donor>();
+            using (var con = (SqliteConnection)_dbUtils.GetConnection())
+            {
+                con.Open();
+                using (var cmd = con.CreateCommand())
+                {
+                    cmd.CommandText = "SELECT * FROM Donors";
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            donors.Add(new Donor(reader.GetString(1), reader.GetString(2), reader.GetString(3)) { Id = reader.GetInt64(0) });
+                        }
+                    }
+                }
+            }
+            return donors;
+        }
     }
 }

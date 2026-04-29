@@ -1,0 +1,28 @@
+﻿Option 1: Terminal (Quickest)
+Open two terminal tabs in Rider and run these:
+
+Start the Server first:
+powershell
+$env:DOTNET_ROOT = "$HOME\.dotnet"; & "$HOME\.dotnet\dotnet.exe" run --project Teledon.Server\Teledon.Server.csproj
+Start the Client:
+powershell
+$env:DOTNET_ROOT = "$HOME\.dotnet"; & "$HOME\.dotnet\dotnet.exe" run --project Teledon.Client\Teledon.Client.csproj
+Option 2: Rider Run Configurations
+To run directly via the Run button in Rider:
+
+Configure .NET CLI:
+Go to File | Settings | Build, Execution, Deployment | Toolset and Build.
+Ensure the .NET CLI executable path is set to: C:\Users\Caius\.dotnet\dotnet.exe.
+Server Configuration:
+Right-click Teledon.Server project -> Edit Configurations.
+Ensure Teledon.Server is selected as the startup project.
+Client Configuration:
+Right-click Teledon.Client project -> Edit Configurations.
+Ensure Teledon.Client is selected.
+Compound Launch (Optional):
+Go to Run | Edit Configurations.
+Click + -> Compound.
+Add both Teledon.Server and Teledon.Client. This allows you to start both with one click!
+IMPORTANT
+
+Always ensure the Server is fully started ("Server started. Waiting for clients...") before launching the Client.

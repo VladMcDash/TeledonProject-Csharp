@@ -25,13 +25,4 @@
       </None>
     </ItemGroup>
 
-    <ItemGroup>
-      <Compile Update="TeledonProject\GUI\LoginForm.cs">
-        <SubType>Form</SubType>
-      </Compile>
-      <Compile Update="TeledonProject\GUI\MainForm.cs">
-        <SubType>Form</SubType>
-      </Compile>
-    </ItemGroup>
-
 </Project>

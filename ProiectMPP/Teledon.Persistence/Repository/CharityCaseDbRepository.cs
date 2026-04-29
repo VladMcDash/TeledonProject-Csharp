@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Data;
 using Microsoft.Data.Sqlite;
 using ProiectMPP.TeledonProject.Domain;
@@ -59,6 +59,29 @@ namespace ProiectMPP.TeledonProject.Repository
         public void Add(CharityCase entity) { }
         public void Delete(long id) { }
         public void Update(long id, CharityCase entity) { }
-        public CharityCase FindOne(long id) => null;
+        public CharityCase FindOne(long id)
+        {
+            using (var con = (SqliteConnection)_dbUtils.GetConnection())
+            {
+                con.Open();
+                using (var cmd = con.CreateCommand())
+                {
+                    cmd.CommandText = "SELECT * FROM CharityCases WHERE id = @id";
+                    cmd.Parameters.AddWithValue("@id", id);
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            return new CharityCase {
+                                Id = reader.GetInt64(0),
+                                Name = reader.GetString(1),
+                                TotalAmount = reader.GetDouble(2)
+                            };
+                        }
+                    }
+                }
+            }
+            return null;
+        }
     }
 }

@@ -2,6 +2,18 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProiectMPP", "ProiectMPP.csproj", "{C7BE961D-76BD-451A-A699-0FDC50291B76}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teledon.Persistence", "Teledon.Persistence\Teledon.Persistence.csproj", "{7D38CFFC-07E5-4CEC-B521-76B5AB2E4C6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teledon.Services", "Teledon.Services\Teledon.Services.csproj", "{405ECD39-0D21-4ABC-86EE-AD7E199D1B6A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teledon.Networking", "Teledon.Networking\Teledon.Networking.csproj", "{26D820BB-A988-46C7-A1D1-7FAF6ADF0A40}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teledon.Server", "Teledon.Server\Teledon.Server.csproj", "{55C44E7A-1513-4113-8FA6-E5376D56D81A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teledon.Client", "Teledon.Client\Teledon.Client.csproj", "{4154482C-AFB6-4CCA-8AB5-15CB160D59EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teledon.Model", "Teledon.Model\Teledon.Model.csproj", "{A9423313-6656-4AB8-B5B0-47B681AE7757}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +24,29 @@ Global
 		{C7BE961D-76BD-451A-A699-0FDC50291B76}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7BE961D-76BD-451A-A699-0FDC50291B76}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C7BE961D-76BD-451A-A699-0FDC50291B76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D38CFFC-07E5-4CEC-B521-76B5AB2E4C6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D38CFFC-07E5-4CEC-B521-76B5AB2E4C6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D38CFFC-07E5-4CEC-B521-76B5AB2E4C6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D38CFFC-07E5-4CEC-B521-76B5AB2E4C6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{405ECD39-0D21-4ABC-86EE-AD7E199D1B6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{405ECD39-0D21-4ABC-86EE-AD7E199D1B6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{405ECD39-0D21-4ABC-86EE-AD7E199D1B6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{405ECD39-0D21-4ABC-86EE-AD7E199D1B6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26D820BB-A988-46C7-A1D1-7FAF6ADF0A40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26D820BB-A988-46C7-A1D1-7FAF6ADF0A40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26D820BB-A988-46C7-A1D1-7FAF6ADF0A40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26D820BB-A988-46C7-A1D1-7FAF6ADF0A40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55C44E7A-1513-4113-8FA6-E5376D56D81A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55C44E7A-1513-4113-8FA6-E5376D56D81A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55C44E7A-1513-4113-8FA6-E5376D56D81A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55C44E7A-1513-4113-8FA6-E5376D56D81A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4154482C-AFB6-4CCA-8AB5-15CB160D59EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4154482C-AFB6-4CCA-8AB5-15CB160D59EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4154482C-AFB6-4CCA-8AB5-15CB160D59EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4154482C-AFB6-4CCA-8AB5-15CB160D59EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9423313-6656-4AB8-B5B0-47B681AE7757}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9423313-6656-4AB8-B5B0-47B681AE7757}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9423313-6656-4AB8-B5B0-47B681AE7757}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9423313-6656-4AB8-B5B0-47B681AE7757}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
