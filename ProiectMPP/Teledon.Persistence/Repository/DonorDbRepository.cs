@@ -63,7 +63,7 @@ namespace ProiectMPP.TeledonProject.Repository
                 con.Open();
                 using (var cmd = con.CreateCommand())
                 {
-                    cmd.CommandText = "INSERT INTO Donors (name, address, phone) VALUES (@n, @a, @p)";
+                    cmd.CommandText = "INSERT INTO Donors (name, address, phoneNumber) VALUES (@n, @a, @p)";
                     cmd.Parameters.AddWithValue("@n", entity.Name);
                     cmd.Parameters.AddWithValue("@a", entity.Address);
                     cmd.Parameters.AddWithValue("@p", entity.PhoneNumber);

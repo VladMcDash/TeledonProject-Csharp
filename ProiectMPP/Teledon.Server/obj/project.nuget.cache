@@ -1,9 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "KugE7FF5D4Y=",
+  "dgSpecHash": "yAboq2zJK1k=",
   "success": true,
   "projectFilePath": "C:\\Users\\Caius\\RiderProjects\\mpp-proiect-csharp-VladMcDash\\ProiectMPP\\Teledon.Server\\Teledon.Server.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Caius\\.nuget\\packages\\google.protobuf\\3.24.0\\google.protobuf.3.24.0.nupkg.sha512",
+    "C:\\Users\\Caius\\.nuget\\packages\\grpc.aspnetcore\\2.60.0\\grpc.aspnetcore.2.60.0.nupkg.sha512",
+    "C:\\Users\\Caius\\.nuget\\packages\\grpc.aspnetcore.server\\2.60.0\\grpc.aspnetcore.server.2.60.0.nupkg.sha512",
+    "C:\\Users\\Caius\\.nuget\\packages\\grpc.aspnetcore.server.clientfactory\\2.60.0\\grpc.aspnetcore.server.clientfactory.2.60.0.nupkg.sha512",
+    "C:\\Users\\Caius\\.nuget\\packages\\grpc.core.api\\2.60.0\\grpc.core.api.2.60.0.nupkg.sha512",
+    "C:\\Users\\Caius\\.nuget\\packages\\grpc.net.client\\2.60.0\\grpc.net.client.2.60.0.nupkg.sha512",
+    "C:\\Users\\Caius\\.nuget\\packages\\grpc.net.clientfactory\\2.60.0\\grpc.net.clientfactory.2.60.0.nupkg.sha512",
+    "C:\\Users\\Caius\\.nuget\\packages\\grpc.net.common\\2.60.0\\grpc.net.common.2.60.0.nupkg.sha512",
+    "C:\\Users\\Caius\\.nuget\\packages\\grpc.tools\\2.60.0\\grpc.tools.2.60.0.nupkg.sha512",
     "C:\\Users\\Caius\\.nuget\\packages\\microsoft.data.sqlite\\8.0.0\\microsoft.data.sqlite.8.0.0.nupkg.sha512",
     "C:\\Users\\Caius\\.nuget\\packages\\microsoft.data.sqlite.core\\8.0.0\\microsoft.data.sqlite.core.8.0.0.nupkg.sha512",
     "C:\\Users\\Caius\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.1.6\\sqlitepclraw.bundle_e_sqlite3.2.1.6.nupkg.sha512",
@@ -11,7 +20,6 @@
     "C:\\Users\\Caius\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.1.6\\sqlitepclraw.lib.e_sqlite3.2.1.6.nupkg.sha512",
     "C:\\Users\\Caius\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.1.6\\sqlitepclraw.provider.e_sqlite3.2.1.6.nupkg.sha512",
     "C:\\Users\\Caius\\.nuget\\packages\\system.configuration.configurationmanager\\8.0.0\\system.configuration.configurationmanager.8.0.0.nupkg.sha512",
-    "C:\\Users\\Caius\\.nuget\\packages\\system.diagnostics.eventlog\\8.0.0\\system.diagnostics.eventlog.8.0.0.nupkg.sha512",
     "C:\\Users\\Caius\\.nuget\\packages\\system.security.cryptography.protecteddata\\8.0.0\\system.security.cryptography.protecteddata.8.0.0.nupkg.sha512"
   ],
   "logs": []

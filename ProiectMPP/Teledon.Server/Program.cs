@@ -1,89 +1,40 @@
-using System;
 using System.Configuration;
-using System.IO;
-using System.Net;
-using System.Net.Sockets;
-using System.Threading;
-using Teledon.Networking;
-// using Teledon.Persistence;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Server.Kestrel.Core;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using ProiectMPP.TeledonProject.Repository;
+using Teledon.Server;
+using Teledon.Services;
+using TeledonProject.Repository;
+using ConfigurationManager = System.Configuration.ConfigurationManager;
 
-namespace Teledon.Server
+var builder = WebApplication.CreateBuilder(args);
+builder.WebHost.ConfigureKestrel(options =>
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Reading Configuration...");
-            string ip = ConfigurationManager.AppSettings["ip"] ?? "127.0.0.1";
-            int port = int.Parse(ConfigurationManager.AppSettings["port"] ?? "55555");
-            
-            string connectionString = ConfigurationManager.ConnectionStrings["teledonDB"]?.ConnectionString ?? "Data Source=teledon.db";
-            connectionString = ResolveConnectionString(connectionString);
-            Console.WriteLine($"DB connection: {connectionString}");
-            
-            var dbUtils = new TeledonProject.Repository.DbUtils(connectionString);
-            
-            var volunteerRepo = new ProiectMPP.TeledonProject.Repository.VolunteerDbRepository(dbUtils);
-            var caseRepo = new ProiectMPP.TeledonProject.Repository.CharityCaseDbRepository(dbUtils);
-            var donorRepo = new ProiectMPP.TeledonProject.Repository.DonorDbRepository(dbUtils);
-            var donationRepo = new ProiectMPP.TeledonProject.Repository.DonationDbRepository(dbUtils);
-            
-            Console.WriteLine("Initializing Service...");
-            TeledonServicesImpl serverImpl = new TeledonServicesImpl(volunteerRepo, caseRepo, donorRepo, donationRepo);
+    options.ListenLocalhost(5000, o => o.Protocols = HttpProtocols.Http2);
+});
 
-            Console.WriteLine($"Starting server on {ip}:{port}...");
-            StartServer(ip, port, serverImpl);
-        }
+builder.Services.AddGrpc();
 
-        private static void StartServer(string ip, int port, TeledonServicesImpl serverImpl)
-        {
-            TcpListener server = null;
-            try
-            {
-                IPAddress adr = IPAddress.Parse(ip);
-                server = new TcpListener(adr, port);
-                server.Start();
-                Console.WriteLine("Server started. Waiting for clients...");
+string connectionString = ConfigurationManager.ConnectionStrings["teledonDB"].ConnectionString;
+Console.WriteLine($"[Server] String de conexiune incarcat: {connectionString}");
 
-                while (true)
-                {
-                    TcpClient client = server.AcceptTcpClient();
-                    Console.WriteLine("Client connected...");
-                    
-                    TeledonClientRpcWorker worker = new TeledonClientRpcWorker(serverImpl, client);
-                    Thread t = new Thread(worker.Run);
-                    t.Start();
-                }
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Server exception: " + e.Message);
-            }
-            finally
-            {
-                server?.Stop();
-            }
-        }
+var dbUtils = new DbUtils(connectionString);
+IVolunteerRepository volunteerRepo = new VolunteerDbRepository(dbUtils);
+ICharityCaseRepository caseRepo = new CharityCaseDbRepository(dbUtils);
+IDonorRepository donorRepo = new DonorDbRepository(dbUtils);
+IDonationRepository donationRepo = new DonationDbRepository(dbUtils);
 
-        private static string ResolveConnectionString(string connectionString)
-        {
-            const string dataSourceKey = "Data Source=";
-            var parts = connectionString.Split(';', StringSplitOptions.RemoveEmptyEntries);
-            for (int i = 0; i < parts.Length; i++)
-            {
-                string part = parts[i].Trim();
-                if (part.StartsWith(dataSourceKey, StringComparison.OrdinalIgnoreCase))
-                {
-                    string path = part.Substring(dataSourceKey.Length).Trim();
-                    if (!Path.IsPathRooted(path))
-                    {
-                        string fullPath = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, path));
-                        parts[i] = dataSourceKey + fullPath;
-                    }
-                    break;
-                }
-            }
-            return string.Join(";", parts);
-        }
-    }
-}
+ITeledonServices serviceImpl = new TeledonServicesImpl(volunteerRepo, caseRepo, donorRepo, donationRepo);
+
+builder.Services.AddSingleton<ITeledonServices>(serviceImpl);
+
+var app = builder.Build();
+
+app.MapGrpcService<TeledonGrpcService>();
+
+app.MapGet("/", () => "Serverul gRPC Teledon ruleaza pe portul 5000.");
+
+Console.WriteLine("[Server] Serverul gRPC porneste pe http://localhost:5000...");
+app.Run();

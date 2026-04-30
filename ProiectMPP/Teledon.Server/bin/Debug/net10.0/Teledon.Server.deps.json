@@ -8,7 +8,7 @@
     ".NETCoreApp,Version=v10.0": {
       "Teledon.Server/1.0.0": {
         "dependencies": {
-          "System.Configuration.ConfigurationManager": "8.0.0",
+          "Grpc.AspNetCore": "2.60.0",
           "Teledon.Model": "1.0.0",
           "Teledon.Networking": "1.0.0",
           "Teledon.Persistence": "1.0.0",
@@ -16,6 +16,84 @@
         },
         "runtime": {
           "Teledon.Server.dll": {}
+        }
+      },
+      "Google.Protobuf/3.24.0": {
+        "runtime": {
+          "lib/net5.0/Google.Protobuf.dll": {
+            "assemblyVersion": "3.24.0.0",
+            "fileVersion": "3.24.0.0"
+          }
+        }
+      },
+      "Grpc.AspNetCore/2.60.0": {
+        "dependencies": {
+          "Google.Protobuf": "3.24.0",
+          "Grpc.AspNetCore.Server.ClientFactory": "2.60.0"
+        }
+      },
+      "Grpc.AspNetCore.Server/2.60.0": {
+        "dependencies": {
+          "Grpc.Net.Common": "2.60.0"
+        },
+        "runtime": {
+          "lib/net8.0/Grpc.AspNetCore.Server.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.60.0.0"
+          }
+        }
+      },
+      "Grpc.AspNetCore.Server.ClientFactory/2.60.0": {
+        "dependencies": {
+          "Grpc.AspNetCore.Server": "2.60.0",
+          "Grpc.Net.ClientFactory": "2.60.0"
+        },
+        "runtime": {
+          "lib/net8.0/Grpc.AspNetCore.Server.ClientFactory.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.60.0.0"
+          }
+        }
+      },
+      "Grpc.Core.Api/2.60.0": {
+        "runtime": {
+          "lib/netstandard2.1/Grpc.Core.Api.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.60.0.0"
+          }
+        }
+      },
+      "Grpc.Net.Client/2.60.0": {
+        "dependencies": {
+          "Grpc.Net.Common": "2.60.0"
+        },
+        "runtime": {
+          "lib/net8.0/Grpc.Net.Client.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.60.0.0"
+          }
+        }
+      },
+      "Grpc.Net.ClientFactory/2.60.0": {
+        "dependencies": {
+          "Grpc.Net.Client": "2.60.0"
+        },
+        "runtime": {
+          "lib/net8.0/Grpc.Net.ClientFactory.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.60.0.0"
+          }
+        }
+      },
+      "Grpc.Net.Common/2.60.0": {
+        "dependencies": {
+          "Grpc.Core.Api": "2.60.0"
+        },
+        "runtime": {
+          "lib/net8.0/Grpc.Net.Common.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.60.0.0"
+          }
         }
       },
       "Microsoft.Data.Sqlite/8.0.0": {
@@ -172,33 +250,10 @@
       },
       "System.Configuration.ConfigurationManager/8.0.0": {
         "dependencies": {
-          "System.Diagnostics.EventLog": "8.0.0",
           "System.Security.Cryptography.ProtectedData": "8.0.0"
         },
         "runtime": {
           "lib/net8.0/System.Configuration.ConfigurationManager.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.23.53103"
-          }
-        }
-      },
-      "System.Diagnostics.EventLog/8.0.0": {
-        "runtime": {
-          "lib/net8.0/System.Diagnostics.EventLog.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.23.53103"
-          }
-        },
-        "runtimeTargets": {
-          "runtimes/win/lib/net8.0/System.Diagnostics.EventLog.Messages.dll": {
-            "rid": "win",
-            "assetType": "runtime",
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "0.0.0.0"
-          },
-          "runtimes/win/lib/net8.0/System.Diagnostics.EventLog.dll": {
-            "rid": "win",
-            "assetType": "runtime",
             "assemblyVersion": "8.0.0.0",
             "fileVersion": "8.0.23.53103"
           }
@@ -264,6 +319,62 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Google.Protobuf/3.24.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5j/OBUVWPTeRYlG3Dm4PSupyU6nJmbnnhPeqjePzCqtzrh5vErx8dToStuhTnG1ZYZ+dawGziC7DN1I6FEQH0g==",
+      "path": "google.protobuf/3.24.0",
+      "hashPath": "google.protobuf.3.24.0.nupkg.sha512"
+    },
+    "Grpc.AspNetCore/2.60.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fFLF1/7C+ZZ10vpw63jNRp9VMIXAAmSFKD8pp8rDtD6Z51H4qYYto/go+XhBs7av5piG+GziSP0uA1VZAYLgAA==",
+      "path": "grpc.aspnetcore/2.60.0",
+      "hashPath": "grpc.aspnetcore.2.60.0.nupkg.sha512"
+    },
+    "Grpc.AspNetCore.Server/2.60.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-BwBvT8WJm5YfUtRdUxG1iqxd1p0rVo3GC/+gM93vS2MvQQa+E9o8PH6hrTrS9OMXeN3IzpU0yv27QBryl4OKZw==",
+      "path": "grpc.aspnetcore.server/2.60.0",
+      "hashPath": "grpc.aspnetcore.server.2.60.0.nupkg.sha512"
+    },
+    "Grpc.AspNetCore.Server.ClientFactory/2.60.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QjhyB/vW1RkvdT2ddxvsOzA5gRhiYxGww3VMXlXVBXD2rKrSj9m8Z3BlatdTtiM+W+zsMfgoggxCIIktcxyWkA==",
+      "path": "grpc.aspnetcore.server.clientfactory/2.60.0",
+      "hashPath": "grpc.aspnetcore.server.clientfactory.2.60.0.nupkg.sha512"
+    },
+    "Grpc.Core.Api/2.60.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-VWah+8dGJhhsay5BQ/Ljq6GYDWj0lSjdzqyoBgUQhXTbBqhs+q5dRFROKxI1xxzlL4pfUO45cf/y+KnHVFG9ew==",
+      "path": "grpc.core.api/2.60.0",
+      "hashPath": "grpc.core.api.2.60.0.nupkg.sha512"
+    },
+    "Grpc.Net.Client/2.60.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-J9U96gjZHOcqSgAThg9vZZhLsbTD005bUggPtMP/RVQnGc3+tQJTpkRUCJtJWq9cykNydsRVoyU38TjPP/VJ4A==",
+      "path": "grpc.net.client/2.60.0",
+      "hashPath": "grpc.net.client.2.60.0.nupkg.sha512"
+    },
+    "Grpc.Net.ClientFactory/2.60.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lCUZjbv6TtI1FbOUE593PLCkXqW2Yrf3KsFfzxIMdJ54o4ELwCEQ26xjfrm+hMTefiXxvXf9FO7zL1rGLWWSig==",
+      "path": "grpc.net.clientfactory/2.60.0",
+      "hashPath": "grpc.net.clientfactory.2.60.0.nupkg.sha512"
+    },
+    "Grpc.Net.Common/2.60.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Y/917aplgD1RA0q1cd9WpnMGyl9Luu3WZl6ZMpPvNQwg2TNw/3uXUDSriDBybeCtxnKUCtxUcWO3WsVkhM1DcA==",
+      "path": "grpc.net.common/2.60.0",
+      "hashPath": "grpc.net.common.2.60.0.nupkg.sha512"
+    },
     "Microsoft.Data.Sqlite/8.0.0": {
       "type": "package",
       "serviceable": true,
@@ -312,13 +423,6 @@
       "sha512": "sha512-JlYi9XVvIREURRUlGMr1F6vOFLk7YSY4p1vHo4kX3tQ0AGrjqlRWHDi66ImHhy6qwXBG3BJ6Y1QlYQ+Qz6Xgww==",
       "path": "system.configuration.configurationmanager/8.0.0",
       "hashPath": "system.configuration.configurationmanager.8.0.0.nupkg.sha512"
-    },
-    "System.Diagnostics.EventLog/8.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-fdYxcRjQqTTacKId/2IECojlDSFvp7LP5N78+0z/xH7v/Tuw5ZAxu23Y6PTCRinqyu2ePx+Gn1098NC6jM6d+A==",
-      "path": "system.diagnostics.eventlog/8.0.0",
-      "hashPath": "system.diagnostics.eventlog.8.0.0.nupkg.sha512"
     },
     "System.Security.Cryptography.ProtectedData/8.0.0": {
       "type": "package",

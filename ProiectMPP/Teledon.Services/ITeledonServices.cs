@@ -9,6 +9,6 @@ namespace Teledon.Services
         List<CharityCase> GetAllCases();
         void AddDonation(string name, string address, string phone, long caseId, double amount);
         List<Donor> SearchDonors(string namePart);
-        void UpdateDonor(string name, string address, string phone);
+        void UpdateDonor(long id, string name, string address, string phoneNumber);
     }
 }

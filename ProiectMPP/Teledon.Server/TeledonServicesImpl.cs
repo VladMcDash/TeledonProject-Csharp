@@ -44,7 +44,6 @@ namespace Teledon.Server
             }
             loggedClients[validUser.Id.ToString()] = client;
             
-            // Put the valid ID into the volunteer so that Logout works
             volunteer.Id = validUser.Id;
         }
 
@@ -76,14 +75,10 @@ namespace Teledon.Server
         {
             var allDonors = donorRepo.FindAll();
             Donor existingDonor = allDonors.FirstOrDefault(d => d.Name == name && d.PhoneNumber == phone);
-            
             if (existingDonor == null)
             {
                 existingDonor = new Donor(name, address, phone);
                 donorRepo.Add(existingDonor);
-                // Assume Add updates the ID, if not, find it again.
-                // SQLite returns last_insert_rowid() usually.
-                // Let's do a quick FindByName since DonorDbRepository implements it
                 existingDonor = donorRepo.FindByName(name);
             }
 
@@ -93,10 +88,23 @@ namespace Teledon.Server
             Donation donation = new Donation(existingDonor, cc, amount);
             donationRepo.Add(donation);
 
-            cc.TotalAmount += amount;
             caseRepo.UpdateTotalAmount(cc.Id, amount);
+            cc.TotalAmount += amount; 
 
-            NotifyDonationAdded(cc);
+            // NOTIFICARE: Trimitem 'cc' (CharityCase) pentru că asta așteaptă metoda DonationAdded
+            foreach (var client in loggedClients.Values)
+            {
+                Task.Run(() => {
+                    try 
+                    {
+                        client.DonationAdded(cc);
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine($"Eroare la trimiterea notificării gRPC: {ex.Message}");
+                    }
+                });
+            }
         }
 
         public List<Donor> SearchDonors(string namePart)
@@ -105,20 +113,19 @@ namespace Teledon.Server
             return donors.Where(d => d.Name.ToLower().Contains(namePart.ToLower())).ToList();
         }
 
-        public void UpdateDonor(string name, string address, string phone)
+        public void UpdateDonor(long id, string name, string address, string phoneNumber)
         {
-            var donors = donorRepo.FindAll();
-            Donor donorToUpdate = donors.FirstOrDefault(d => d.Name == name);
-            if (donorToUpdate != null)
+            Donor donor = new Donor(name, address, phoneNumber) { Id = id };
+            donorRepo.Update(donor.Id, donor); 
+            foreach (var client in loggedClients.Values)
             {
-                donorToUpdate.Address = address;
-                donorToUpdate.PhoneNumber = phone;
-                donorRepo.Update(donorToUpdate.Id, donorToUpdate);
-                NotifyDonorUpdated(donorToUpdate);
-            }
-            else
-            {
-                throw new Exception("Donor not found");
+                Task.Run(() => {
+                    try {
+                        client.DonorUpdated(donor);
+                    } catch (Exception e) {
+                        Console.WriteLine("Error notifying client: " + e.Message);
+                    }
+                });
             }
         }
 
@@ -128,32 +135,8 @@ namespace Teledon.Server
             {
                 Task.Run(() =>
                 {
-                    try
-                    {
-                        client.DonationAdded(updatedCase);
-                    }
-                    catch (Exception e)
-                    {
-                        Console.WriteLine("Error notifying client: " + e.Message);
-                    }
-                });
-            }
-        }
-
-        private void NotifyDonorUpdated(Donor updatedDonor)
-        {
-            foreach (var client in loggedClients.Values)
-            {
-                Task.Run(() =>
-                {
-                    try
-                    {
-                        client.DonorUpdated(updatedDonor);
-                    }
-                    catch (Exception e)
-                    {
-                        Console.WriteLine("Error notifying client: " + e.Message);
-                    }
+                    try { client.DonationAdded(updatedCase); }
+                    catch (Exception e) { Console.WriteLine("Error: " + e.Message); }
                 });
             }
         }

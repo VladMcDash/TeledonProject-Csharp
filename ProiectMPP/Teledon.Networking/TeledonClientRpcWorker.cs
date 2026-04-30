@@ -199,11 +199,12 @@ namespace Teledon.Networking
                 try
                 {
                     var data = JsonSerializer.Deserialize<JsonElement>(request.JsonData);
+                    long id = data.GetProperty("Id").GetInt64();
                     string name = data.GetProperty("Name").GetString();
                     string address = data.GetProperty("Address").GetString();
                     string phone = data.GetProperty("Phone").GetString();
                     
-                    server.UpdateDonor(name, address, phone);
+                    server.UpdateDonor(id,name, address, phone);
                     return new Response { Type = ResponseType.OK };
                 }
                 catch (Exception e)

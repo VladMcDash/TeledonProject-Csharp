@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Teledon.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+db3b40b0a3c967678830ff682e4c6402023a01a6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9ec9278ac191ceb3e0eaf1550adde9ed20c9cfd4")]
 [assembly: System.Reflection.AssemblyProductAttribute("Teledon.Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Teledon.Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

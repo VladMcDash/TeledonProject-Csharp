@@ -124,6 +124,7 @@ namespace TeledonProject.GUI
                 if (listBoxDonors.SelectedItem is Donor selected)
                 {
                     _service.UpdateDonor(
+                        selected.Id,
                         txtDonorName.Text, 
                         txtAddress.Text, 
                         txtPhone.Text

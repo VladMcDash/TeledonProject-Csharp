@@ -104,7 +104,7 @@ namespace Teledon.Networking
             return response.GetData<List<Donor>>();
         }
 
-        public virtual void UpdateDonor(string name, string address, string phone)
+        public virtual void UpdateDonor(long id, string name, string address, string phone)
         {
             var req = new Request { Type = RequestType.UPDATE_DONOR };
             var data = new { Name = name, Address = address, Phone = phone };
